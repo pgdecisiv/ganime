@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 580" role="img" aria-labelledby="title desc">
+  <title id="title">Durin’s Door</title>
+  <desc id="desc">An ancient arched stone doorway with carved trees, a crescent moon, and a star, softly glowing in the dark.</desc>
+  <defs>
+    <linearGradient id="stone" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#291c31" />
+      <stop offset=".48" stop-color="#16131f" />
+      <stop offset="1" stop-color="#0b1116" />
+    </linearGradient>
+    <linearGradient id="silver" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ddff9a" />
+      <stop offset=".5" stop-color="#a8f7dd" />
+      <stop offset="1" stop-color="#ff74bb" />
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-35%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </defs>
+  <path d="M28 548 45 500 39 438 55 395 46 330 69 286 59 218 91 171 100 115 158 91 191 56 259 49 292 34 339 57 390 64 419 100 467 119 463 166 493 201 478 249 502 291 484 344 501 396 484 449 501 515 477 548Z" fill="#11121b" stroke="#352643" stroke-width="2" />
+  <path d="M81 531V258a189 189 0 0 1 378 0v273Z" fill="url(#stone)" stroke="#ff4ca7" stroke-width="2" />
+  <path d="M96 518V260a174 174 0 0 1 348 0v258Z" fill="none" stroke="#b7ff4a" stroke-width="1.5" opacity=".8" />
+  <path d="M115 516V263a155 155 0 0 1 310 0v253" fill="none" stroke="#ff4ca7" stroke-width="1" opacity=".55" />
+  <path d="M120 518V271a150 150 0 0 1 300 0v247Z" fill="#0b0a12" stroke="#7f567e" stroke-width="1" />
+  <path d="M270 120c-24 0-42 19-42 42s18 42 42 42c-13-8-22-23-22-42s9-34 22-42Z" fill="none" stroke="url(#silver)" stroke-width="3" filter="url(#glow)" />
+  <path d="m270 222 5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1Z" fill="#d3ff8a" filter="url(#glow)" />
+  <g fill="none" stroke="url(#silver)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M190 466V303m0 65-35-33m35 9 33-34m-33-5-26-26m26 7 28-26m-28 5-18-25m18 5 18-19m-18 19v-31" stroke-width="3" />
+    <path d="M350 466V303m0 65-35-33m35 9 33-34m-33-5-26-26m26 7 28-26m-28 5-18-25m18 5 18-19m-18 19v-31" stroke-width="3" />
+    <path d="M130 481h280m-248 13h216M270 249v229" stroke-width="1.5" opacity=".7" />
+    <path d="m147 298 9 12-9 12-9-12Zm246 0 9 12-9 12-9-12Z" stroke-width="2" />
+  </g>
+  <g fill="#ff4ca7" opacity=".82">
+    <circle cx="190" cy="303" r="3" /><circle cx="350" cy="303" r="3" />
+    <circle cx="270" cy="249" r="2" /><circle cx="190" cy="466" r="2" /><circle cx="350" cy="466" r="2" />
+  </g>
+  <path d="M69 533h402m-390 7h378" stroke="#b7ff4a" stroke-width="1" opacity=".45" />
+  <path d="M73 172 99 162m342 10 26 10M53 395l29-7m376 7 29 7M111 90l31 9m255-9-31 12" stroke="#725177" stroke-width="2" />
+</svg>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090611" />
+    <meta name="description" content="Ganime’s Tower Corporation — Level 04 assignment." />
+    <title>Ganime’s Tower — Level 04</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/welcome.css" />
+    <link rel="stylesheet" href="/screen.css" />
+    <link rel="stylesheet" href="/durin.css" />
+    <script src="/rabbit-level.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar durin-topbar">
+      <span class="level-indicator">LEVEL 04</span>
+    </header>
+    <main class="durin-main rabbit-main">
+      <p class="rabbit-legend">OK bucko, you are getting it.<br />What do you see here:</p>
+      <figure class="rabbit-preview">
+        <img src="/assets/rabb1.png" width="800" height="800" alt="Cropped pixel-art preview of a turquoise rabbit on a white background." />
+      </figure>
+      <form class="durin-form rabbit-form" id="password-form" novalidate>
+        <label class="visually-hidden" for="password-input">Your answer</label>
+        <input id="password-input" name="answer" type="text" placeholder="ENTER ANSWER" autocomplete="off" spellcheck="false" aria-label="Your answer" />
+        <button type="submit">SUBMIT</button>
+        <span class="visually-hidden" id="door-feedback" role="status" aria-live="polite"></span>
+      </form>
+      <aside class="commentator rabbit-commentator" aria-label="Pedro, tower commentator">
+        <div class="commentator-avatar" aria-hidden="true">P<span>•</span></div>
+        <div class="commentator-copy"><div class="commentator-name">PEDRO <span>// TOWER COMMENTARY</span></div><p>Sometimes the answer is hidden. The important thing is what you don’t see.</p></div>
+        <span class="commentator-signal" aria-hidden="true">LIVE</span>
+      </aside>
+    </main>
+  </body>
+</html>

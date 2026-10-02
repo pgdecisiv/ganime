@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Ganime’s Tower key</title>
+  <desc id="desc">A luminous green key with a hot pink circular bow, drawn in a retro neon style.</desc>
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <linearGradient id="shaft" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d0ff6a" />
+      <stop offset="1" stop-color="#8eff38" />
+    </linearGradient>
+  </defs>
+  <circle cx="160" cy="160" r="135" fill="#ff4ca7" opacity=".035" />
+  <circle cx="160" cy="160" r="119" fill="none" stroke="#ff4ca7" stroke-width="1" stroke-dasharray="2 8" opacity=".45" />
+  <g filter="url(#glow)" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="105" cy="106" r="48" fill="#120b1b" stroke="#ff4ca7" stroke-width="8" />
+    <circle cx="105" cy="106" r="29" fill="none" stroke="#ff4ca7" stroke-width="2" opacity=".8" />
+    <path d="M141 140 L230 229" fill="none" stroke="url(#shaft)" stroke-width="17" />
+    <path d="M216 215 L246 185 L270 209 L251 228 L268 245 L249 264 Z" fill="url(#shaft)" stroke="#b7ff4a" stroke-width="4" />
+    <path d="M225 224 L247 202 M238 237 L255 220" fill="none" stroke="#171021" stroke-width="5" opacity=".85" />
+    <path d="M100 96 L110 106 L100 116" fill="none" stroke="#ffb5dc" stroke-width="3" />
+  </g>
+  <path d="M40 160 H74 M246 86 H279 M160 38 V64 M160 256 V282" stroke="#b7ff4a" stroke-width="1" opacity=".5" />
+  <circle cx="40" cy="160" r="2" fill="#b7ff4a" /><circle cx="279" cy="86" r="2" fill="#ff4ca7" />
+</svg>

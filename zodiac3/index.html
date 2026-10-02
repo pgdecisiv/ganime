@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090611" />
+    <meta name="description" content="Ganime’s Tower Corporation — Level 13, alternate zodiac assignment." />
+    <title>Ganime’s Tower — The Argentinean Cheat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/welcome.css" />
+    <link rel="stylesheet" href="/screen.css" />
+    <link rel="stylesheet" href="/inventory.css" />
+    <link rel="stylesheet" href="/zodiac3/zodiac3.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Ganime’s Tower home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>GANIME’S TOWER</span></a>
+      <span class="level-indicator">LEVEL 13 <span>// THE ARGENTINEAN CHEAT</span></span>
+      <div class="topbar-meta"><span class="status-dot"></span><span>PERSONNEL // RELATIONSHIP AUDIT</span></div>
+    </header>
+    <main class="zodiac3-main">
+      <section class="zodiac3-panel" aria-labelledby="zodiac3-title">
+        <div class="zodiac3-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> EMPLOYEE ORIENTATION / ASSOCIATION EXERCISE</p>
+          <h1 id="zodiac3-title">The Argentinean cheat</h1>
+          <p>Connect every name to a zodiac sign. Use the mouse. HR insists this is normal.</p>
+        </div>
+        <div class="connection-board" id="connection-board">
+          <svg class="connection-lines" id="connection-lines" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+            <g id="saved-lines"></g>
+            <path id="draft-line" hidden />
+          </svg>
+          <section class="match-column people-column" aria-label="Names to match">
+            <h2>PERSONNEL FILES <span>// 07</span></h2>
+            <div class="match-rows" id="people-rows">
+              <button class="match-box person-box" type="button" data-person="Gachi">Gachi<span class="port" aria-hidden="true"></span></button>
+              <button class="match-box person-box" type="button" data-person="Pachi">Pachi<span class="port" aria-hidden="true"></span></button>
+              <button class="match-box person-box" type="button" data-person="she">she<span class="port" aria-hidden="true"></span></button>
+              <button class="match-box person-box" type="button" data-person="her BF">her BF<span class="port" aria-hidden="true"></span></button>
+              <button class="match-box person-box" type="button" data-person="her EX">her EX<span class="port" aria-hidden="true"></span></button>
+              <button class="match-box person-box" type="button" data-person="me">me<span class="port" aria-hidden="true"></span></button>
+              <button class="match-box person-box" type="button" data-person="those two pelotudos">those two pelotudos<span class="port" aria-hidden="true"></span></button>
+            </div>
+          </section>
+          <section class="match-column signs-column" aria-label="Zodiac signs">
+            <h2>CELESTIAL ROSTER <span>// 12</span></h2>
+            <div class="match-rows signs-rows" id="sign-rows">
+              <button class="match-box sign-box" type="button" data-sign="Aries"><span class="port" aria-hidden="true"></span>Aries</button>
+              <button class="match-box sign-box" type="button" data-sign="Taurus"><span class="port" aria-hidden="true"></span>Taurus</button>
+              <button class="match-box sign-box" type="button" data-sign="Gemini"><span class="port" aria-hidden="true"></span>Gemini</button>
+              <button class="match-box sign-box" type="button" data-sign="Cancer"><span class="port" aria-hidden="true"></span>Cancer</button>
+              <button class="match-box sign-box" type="button" data-sign="Leo"><span class="port" aria-hidden="true"></span>Leo</button>
+              <button class="match-box sign-box" type="button" data-sign="Virgo"><span class="port" aria-hidden="true"></span>Virgo</button>
+              <button class="match-box sign-box" type="button" data-sign="Libra"><span class="port" aria-hidden="true"></span>Libra</button>
+              <button class="match-box sign-box" type="button" data-sign="Scorpio"><span class="port" aria-hidden="true"></span>Scorpio</button>
+              <button class="match-box sign-box" type="button" data-sign="Sagittarius"><span class="port" aria-hidden="true"></span>Sagittarius</button>
+              <button class="match-box sign-box" type="button" data-sign="Capricorn"><span class="port" aria-hidden="true"></span>Capricorn</button>
+              <button class="match-box sign-box" type="button" data-sign="Aquarius"><span class="port" aria-hidden="true"></span>Aquarius</button>
+              <button class="match-box sign-box" type="button" data-sign="Pisces"><span class="port" aria-hidden="true"></span>Pisces</button>
+            </div>
+          </section>
+        </div>
+        <div class="zodiac3-footer">
+          <aside class="zodiac3-pedro"><div class="commentator-avatar" aria-hidden="true">P<span>•</span></div><div><strong>PEDRO <small>// TOWER COMMENTARY</small></strong><p id="pedro-line">Draw a line from each name to its sign. I'm sure the stars have nothing to do with this.</p></div></aside>
+          <div class="zodiac3-progress"><p class="match-status" id="match-status" role="status" aria-live="polite">0 / 7 CONNECTIONS</p><a class="zodiac3-next" id="zodiac-next" href="/haiku" hidden>NEXT LEVEL <span>→</span></a></div>
+        </div>
+      </section>
+    </main>
+    <script src="/inventory.js?v=memory-inventory-4" defer></script>
+    <script src="/zodiac3/zodiac3.js?v=connections-2" defer></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+html, body { width: 100%; height: 100%; overflow: hidden; }
+body { min-height: 100dvh; display: flex; flex-direction: column; background: radial-gradient(ellipse at 50% 45%, #23102c 0%, #0b0812 61%, #08060d 100%); }
+.timer-main { min-height: 0; flex: 1; display: grid; place-items: center; padding: 20px; }
+.timer-panel { width: min(100%, 620px); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.timer-panel > .eyebrow { margin: 0 0 9px; color: var(--acid); font: 700 9px var(--mono); letter-spacing: .14em; }
+.timer-panel h1 { margin: 0; color: #f7eff9; font: 600 clamp(22px, 4vh, 34px)/1.2 "Orbitron", var(--mono); text-shadow: 0 0 20px #ff4ca722; }
+.timer-display { display: flex; justify-content: center; align-items: center; min-width: min(100%, 390px); margin: clamp(16px, 4vh, 30px) 0 0; padding: 16px 24px 12px; border: 1px solid #b7ff4a66; background: #080b10; color: #b7ff4a; font: 600 clamp(64px, 13vw, 106px)/1 "Orbitron", var(--mono); letter-spacing: .035em; text-shadow: 0 0 8px #b7ff4a88, 0 0 30px #b7ff4a44; box-shadow: 0 0 0 5px #b7ff4a0a, 0 0 36px #b7ff4a15, inset 0 0 30px #b7ff4a09; font-variant-numeric: tabular-nums; }
+.timer-display.scroll-enabled { cursor: ns-resize; border-color: #ff4ca7aa; box-shadow: 0 0 0 5px #ff4ca70a, 0 0 36px #ff4ca722, inset 0 0 30px #ff4ca70a; }
+.timer-colon { margin: 0 .08em; color: #ff62b6; text-shadow: 0 0 12px #ff4ca777; animation: colon-blink 1.2s steps(2, start) infinite; }
+.timer-units { width: min(100%, 390px); display: flex; justify-content: space-around; margin-top: 8px; color: #9b8da2; font: 700 8px var(--mono); letter-spacing: .15em; }
+.timer-units span:nth-child(2) { color: #ff62b6; }
+.timer-actions { min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; margin: clamp(18px, 4vh, 30px) 0 clamp(22px, 5vh, 38px); }
+.timer-button, .timer-next { min-width: 148px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 0 20px; border: 1px solid #b7ff4a; background: #b7ff4a; color: #100b16; font: 700 10px var(--mono); letter-spacing: .14em; text-decoration: none; cursor: pointer; box-shadow: 0 0 18px #b7ff4a33; transition: background .18s ease, box-shadow .18s ease, transform .18s ease; }
+.timer-button:hover:not(:disabled), .timer-button:focus-visible, .timer-next:hover, .timer-next:focus-visible { background: #d3ff8b; box-shadow: 0 0 26px #b7ff4a66; outline: 1px solid #efffd0; outline-offset: 3px; }
+.timer-button:active:not(:disabled) { transform: translateY(1px); }
+.timer-button.is-stop { border-color: #ff4ca7; background: #ff4ca7; box-shadow: 0 0 18px #ff4ca733; }
+.timer-button.is-stop:hover:not(:disabled) { background: #ff91c9; box-shadow: 0 0 26px #ff4ca766; outline-color: #ffd5eb; }
+.timer-button.is-locked { border-color: #7e7581; background: #24202a; color: #9c929f; box-shadow: none; cursor: not-allowed; }
+.timer-button[hidden], .timer-next[hidden] { display: none; }
+.timer-next { border-color: #ff4ca7; background: #ff4ca7; color: #150b18; }
+.timer-next:hover, .timer-next:focus-visible { background: #ff91c9; outline-color: #ffd5eb; }
+.timer-pedro { width: min(100%, 470px); display: flex; align-items: center; gap: 10px; text-align: left; }
+.timer-pedro .commentator-avatar { flex: 0 0 36px; width: 36px; height: 36px; font-size: 13px; }
+.timer-pedro strong { color: #ff8bc5; font: 700 8px var(--mono); letter-spacing: .09em; }
+.timer-pedro small { color: #86788e; font-size: 7px; font-weight: 400; }
+.timer-pedro p { margin: 4px 0 0; color: #c1b5c6; font: 10px/1.4 var(--mono); }
+@keyframes colon-blink { to { opacity: .45; } }
+@media (max-width: 520px) {
+  .timer-main { padding: 14px; }
+  .timer-display { min-width: min(100%, 310px); padding: 14px 12px 10px; font-size: clamp(56px, 17vw, 82px); }
+  .timer-units { width: min(100%, 310px); font-size: 7px; }
+  .timer-actions { flex-wrap: wrap; }
+  .timer-button, .timer-next { min-width: 130px; }
+}
+@media (max-height: 520px) {
+  .timer-main { padding: 8px; }
+  .timer-panel > .eyebrow { margin-bottom: 5px; font-size: 8px; }
+  .timer-panel h1 { font-size: 22px; }
+  .timer-display { margin-top: 10px; padding: 8px 18px 6px; font-size: 56px; }
+  .timer-actions { min-height: 40px; margin: 12px 0 15px; }
+  .timer-button, .timer-next { min-height: 40px; }
+  .timer-pedro p { font-size: 9px; }
+}

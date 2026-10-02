@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090611" />
+    <meta name="description" content="Ganime’s Tower Corporation — Level 06 labyrinth assignment." />
+    <title>Ganime’s Tower — Level 06</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/welcome.css" />
+    <link rel="stylesheet" href="/screen.css" />
+    <link rel="stylesheet" href="/dragthemousethroughthelabyrinth/maze.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Ganime’s Tower home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>GANIME’S TOWER</span></a>
+      <span class="level-indicator">LEVEL 06 <span>// MAZE ASSIGNMENT</span></span>
+      <div class="topbar-meta"><span class="status-dot"></span><span>PERSONNEL // MOVEMENT TEST</span></div>
+    </header>
+    <main class="maze-main">
+      <div class="maze-heading"><p class="eyebrow"><span class="eyebrow-line"></span> EMPLOYEE ORIENTATION / PRACTICAL</p><h1>Three mice. One way out.</h1></div>
+      <section class="maze-frame" aria-label="Labyrinth assignment">
+        <div class="maze-label maze-entry">ENTRY</div>
+          <svg id="maze" viewBox="0 0 700 400" role="img" aria-label="A branching labyrinth">
+          <g id="maze-walls" class="maze-walls" aria-hidden="true"></g>
+          <g class="mouse mouse-drag" id="mouse-drag" transform="translate(32 225)" tabindex="0" role="img" aria-label="Mouse three">
+            <ellipse class="mouse-ear" cx="-8" cy="-8" rx="6" ry="8"/><ellipse class="mouse-ear" cx="8" cy="-8" rx="6" ry="8"/><circle class="mouse-body" r="11"/><circle class="mouse-eye" cx="4" cy="-2" r="1.5"/><path class="mouse-tail" d="M -9 6 Q -17 10 -14 15"/>
+          </g>
+          <g class="mouse mouse-arrows" id="mouse-arrows" transform="translate(18 225)" aria-label="Arrow key mouse">
+            <ellipse class="mouse-ear" cx="-8" cy="-8" rx="6" ry="8"/><ellipse class="mouse-ear" cx="8" cy="-8" rx="6" ry="8"/><circle class="mouse-body" r="11"/><circle class="mouse-eye" cx="4" cy="-2" r="1.5"/><path class="mouse-tail" d="M -9 6 Q -17 10 -14 15"/>
+          </g>
+          <g class="mouse mouse-wasd" id="mouse-wasd" transform="translate(25 225)" aria-label="WASD key mouse">
+            <ellipse class="mouse-ear" cx="-8" cy="-8" rx="6" ry="8"/><ellipse class="mouse-ear" cx="8" cy="-8" rx="6" ry="8"/><circle class="mouse-body" r="11"/><circle class="mouse-eye" cx="4" cy="-2" r="1.5"/><path class="mouse-tail" d="M -9 6 Q -17 10 -14 15"/>
+          </g>
+          </svg>
+        <div class="maze-label maze-exit">EXIT</div>
+      </section>
+      <div class="maze-controls"><span><kbd>← ↑ ↓ →</kbd> ARROWS</span><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> WASD</span></div>
+      <div class="maze-bottom"><aside class="maze-pedro"><div class="commentator-avatar" aria-hidden="true">P<span>•</span></div><div><strong>PEDRO <small>// TOWER COMMENTARY</small></strong><p>Management calls this team building. Management is famously bad at teamwork.</p></div></aside><a class="maze-next" id="next-level" href="/mechanics-101" hidden>NEXT LEVEL <span>→</span></a></div>
+    </main>
+    <script src="/dragthemousethroughthelabyrinth/maze.js"></script>
+  </body>
+</html>

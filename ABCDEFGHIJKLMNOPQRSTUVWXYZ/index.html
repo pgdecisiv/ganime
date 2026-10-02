@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090611" />
+    <meta name="description" content="Ganime’s Tower Corporation — Level 11 linguistic assessment." />
+    <title>Ganime’s Tower — Level 11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/welcome.css" />
+    <link rel="stylesheet" href="/screen.css" />
+    <link rel="stylesheet" href="/inventory.css" />
+    <link rel="stylesheet" href="/ABCDEFGHIJKLMNOPQRSTUVWXYZ/level.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Ganime’s Tower home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>GANIME’S TOWER</span></a>
+      <span class="level-indicator">LEVEL 11 <span>// FIELD OBSERVATION</span></span>
+      <div class="topbar-meta"><span class="status-dot"></span><span>PERSONNEL // LANGUAGE REVIEW</span></div>
+    </header>
+    <main class="level-eleven-main">
+      <section class="phrase-stage" id="phrase-stage" aria-label="Image and phrase response">
+        <img class="phrase-image" src="/assets/level11-prompt.jfif" alt="A pixel-art fox leaping over a sleeping dog at night" />
+        <form class="phrase-form" id="phrase-form">
+          <label class="visually-hidden" for="phrase-answer">Enter the phrase</label>
+          <input id="phrase-answer" name="answer" type="text" autocomplete="off" placeholder="ENTER PHRASE" required />
+          <button type="submit"><span>SUBMIT</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="phrase-feedback" id="phrase-feedback" role="status" aria-live="polite"></p>
+      </section>
+      <section class="stick-stage" id="stick-stage" aria-labelledby="stick-title" hidden>
+        <p class="eyebrow"><span class="eyebrow-line"></span> FIELD RECOVERY / UNCLAIMED ITEM</p>
+        <h1 id="stick-title">pick up the stick the dog left behind, bucko!</h1>
+        <button class="stick-pickup" id="stick-pickup" type="button" aria-label="Add the stick to inventory">
+          <img src="/assets/stick.png" alt="Pixel-art stick" />
+          <span id="stick-prompt">ADD TO INVENTORY</span>
+        </button>
+        <a class="level-eleven-next" id="level-eleven-next" href="/movienight" hidden>NEXT LEVEL <span>→</span></a>
+      </section>
+      <aside class="level-eleven-pedro" aria-label="Pedro, tower commentator">
+        <div class="commentator-avatar" aria-hidden="true">P<span>•</span></div>
+        <div><strong>PEDRO <small>// TOWER COMMENTARY</small></strong><p id="level-eleven-pedro">Look closely. I am told the answer is a complete sentence, because apparently single words are too easy now.</p></div>
+      </aside>
+    </main>
+    <script src="/inventory.js?v=memory-inventory-4" defer></script>
+    <script src="/ABCDEFGHIJKLMNOPQRSTUVWXYZ/level.js?v=memory-inventory-1" defer></script>
+  </body>
+</html>

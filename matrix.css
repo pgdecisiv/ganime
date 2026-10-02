@@ -1,0 +1,13 @@
+html, body { width: 100%; height: 100%; overflow: hidden; }
+.matrix-body { background: #020805; color: #71f178; }
+.matrix-topbar { position: relative; z-index: 2; display: flex; justify-content: flex-start; height: 56px; padding: 0 clamp(20px, 4vw, 56px); border-bottom: 1px solid #4dff6a33; background: #020805; }
+.matrix-topbar .level-indicator { color: #8cff82; font-size: 9px; text-shadow: 0 0 10px #46ff5b77; }
+.matrix-main { position: relative; height: calc(100dvh - 56px); overflow: hidden; background: radial-gradient(ellipse at 50% 45%, #07340e 0%, #03120a 54%, #020805 100%); }
+.matrix-grid { position: absolute; inset: 0; display: grid; align-content: space-between; overflow: hidden; padding: 13px 8px; }
+.matrix-glyph { display: grid; place-items: center; min-width: 0; color: #64ed70; opacity: var(--glyph-opacity, .5); font: 400 clamp(9px, .9vw, 13px)/1 var(--mono); text-shadow: 0 0 7px #4aff6370; user-select: none; }
+button.matrix-glyph { appearance: none; padding: 0; border: 0; background: transparent; cursor: pointer; }
+button.matrix-glyph:hover, button.matrix-glyph:focus-visible { color: #efffea; opacity: 1; text-shadow: 0 0 4px #d8ffdc, 0 0 18px #75ff89; outline: 0; }
+@media (max-width: 600px) {
+  .matrix-grid { padding: 10px 4px; }
+  .matrix-glyph { font-size: 10px; }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090611" />
+    <meta name="description" content="Ganime’s Tower Corporation — Level 07 timekeeping assessment." />
+    <title>Ganime’s Tower — Level 07</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/welcome.css" />
+    <link rel="stylesheet" href="/screen.css" />
+    <link rel="stylesheet" href="/mechanics-101/timer.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Ganime’s Tower home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>GANIME’S TOWER</span></a>
+      <span class="level-indicator">LEVEL 07 <span>// TIMEKEEPING ASSESSMENT</span></span>
+      <div class="topbar-meta"><span class="status-dot"></span><span>PERSONNEL // TEMPORAL ACCURACY</span></div>
+    </header>
+    <main class="timer-main">
+      <section class="timer-panel" aria-labelledby="timer-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> EMPLOYEE ORIENTATION / PRACTICAL</p>
+        <h1 id="timer-title">A matter of timing.</h1>
+        <div class="timer-display" id="timer-display" role="timer" aria-live="off" aria-label="Elapsed seconds and deciseconds"><span id="seconds">00</span><span class="timer-colon">:</span><span id="deciseconds">0</span></div>
+        <div class="timer-units"><span>SECONDS</span><span aria-hidden="true">/</span><span>DECISECONDS</span></div>
+        <div class="timer-actions">
+          <button class="timer-button" id="timer-button" type="button">START</button>
+          <a class="timer-next" id="next-button" href="/Chess" hidden>101 BABY!!! <span>→</span></a>
+        </div>
+        <aside class="timer-pedro" aria-label="Pedro, tower commentator"><div class="commentator-avatar" aria-hidden="true">P<span>•</span></div><div><strong>PEDRO <small>// TOWER COMMENTARY</small></strong><p id="pedro-line">Precision. Management’s favorite way to pretend time is money.</p></div></aside>
+      </section>
+    </main>
+    <script src="/mechanics-101/timer.js"></script>
+  </body>
+</html>

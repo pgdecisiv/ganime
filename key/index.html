@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090611" />
+    <meta name="description" content="Ganime’s Tower Corporation — Level 02 assignment." />
+    <title>Ganime’s Tower — Level 02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/welcome.css" />
+    <link rel="stylesheet" href="/screen.css" />
+    <script src="/key-level.js" defer></script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Ganime’s Tower home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>GANIME’S TOWER</span>
+      </a>
+      <span class="level-indicator">LEVEL 02 <span>// ACTIVE</span></span>
+      <div class="topbar-meta"><span class="status-dot"></span><span>PERSONNEL // ASSIGNMENT IN PROGRESS</span></div>
+    </header>
+
+    <main class="is-playing">
+      <section class="game-section keypad-screen" aria-labelledby="game-title">
+        <div class="keypad-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> INCOMING TRANSMISSION // LOCK 02</p><h1 id="game-title">Level two.</h1></div>
+          <div class="keypad-stage" id="stage-label">SEQUENCE 01 // UNLABELED</div>
+        </div>
+        <section class="keypad-console" aria-label="Tower access keypad">
+          <div class="keypad-legend" id="legend" aria-live="polite">What are the odds?</div>
+          <div class="keypad-grid" id="keypad-grid" aria-label="Twelve-button keypad"></div>
+          <div class="keypad-feedback" id="keypad-feedback" role="status" aria-live="polite"></div>
+        </section>
+        <aside class="commentator" aria-label="Pedro, tower commentator">
+          <div class="commentator-avatar" aria-hidden="true">P<span>•</span></div>
+          <div class="commentator-copy"><div class="commentator-name">PEDRO <span>// TOWER COMMENTARY</span></div><p id="commentator-line" role="status" aria-live="polite">Oh good, you found the right door. Let's see if you can count.</p></div>
+          <span class="commentator-signal" aria-hidden="true">LIVE</span>
+        </aside>
+      </section>
+    </main>
+
+    <footer><span>GANIME’S TOWER CORPORATION</span><span>YOUR FIRST DAY IS GOING ADEQUATELY</span><span>© <span id="year"></span></span></footer>
+  </body>
+</html>

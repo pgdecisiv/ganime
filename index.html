@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090e13" />
+    <meta name="description" content="Enter Ganime’s Tower, a riddle game where every answer points to another level." />
+    <title>Ganime’s Tower — Internal Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="welcome.css" />
+    <link rel="stylesheet" href="screen.css?v=disclaimer-fullscreen-1" />
+    <script src="game.js?v=onboarding-slides-4" defer></script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Ganime’s Tower home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>GANIME’S TOWER</span>
+      </a>
+      <span class="level-indicator" id="level-indicator">LEVEL 00 <span>// ONBOARDING 01/03</span></span>
+      <div class="topbar-meta"><span class="status-dot"></span><span>PERSONNEL // ORIENTATION IN PROGRESS</span></div>
+    </header>
+
+    <main id="top">
+      <div class="welcome-screen" id="welcome-screen">
+      <section class="disclaimer-screen" id="disclaimer-screen" aria-labelledby="disclaimer-title">
+        <div class="disclaimer-heading"><span class="warning-symbol" aria-hidden="true">⚠</span><p>GANIME’S TOWER CORPORATION // PERSONNEL NOTICE</p></div>
+        <h1 id="disclaimer-title">Disclaimer</h1>
+        <div class="disclaimer-copy">
+          <p>This is a game that encourages lateral thinking. We expect our recruits to Google things, edit URLs, play around with the provided pictures, and learn about music, maps, history, pop culture, a bit of Pokémon, and a bit of Goethe.</p>
+          <p>This game may contain foul language. It will definitely increase in difficulty.</p>
+          <p>Expect a long journey instead of a speedrun. And finally, be sure your guide will not underestimate you.</p>
+        </div>
+        <p class="disclaimer-stamp">PLEASE ACKNOWLEDGE BY CONTINUING</p>
+      </section>
+      <section class="hero" id="welcome-hero" aria-labelledby="hero-title" hidden>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> GANIME’S TOWER CORPORATION // EST. 1986</p>
+          <h1 id="hero-title">Welcome to<br /><em>Ganime’s Tower.</em></h1>
+          <p class="intro">Your onboarding begins now. The Tower is pleased to have you. The Tower is always pleased.</p>
+          <p class="quiet-note"><span aria-hidden="true">✳</span> PERSONNEL FILE: NEW HIRE &nbsp; // &nbsp; ORIENTATION REQUIRED</p>
+        </div>
+        <div class="eye-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="eye-core"><div class="iris"><div class="pupil"></div><span class="glint"></span></div></div>
+          <span class="orbit-label label-top">SIGNAL DETECTED</span><span class="orbit-label label-bottom">WE HAVE BEEN EXPECTING YOU</span>
+          <span class="crosshair crosshair-a">+</span><span class="crosshair crosshair-b">+</span>
+          <span class="eye-readout">SIGNAL 03<br />STATUS: WATCHING</span>
+        </div>
+          <div class="hero-index"><span>02</span><span class="index-rule"></span><span>WELCOME / GANIME’S TOWER</span></div>
+        </section>
+
+      <section class="protocol" id="welcome-protocol" aria-labelledby="protocol-title" hidden>
+        <div class="slide-meta">
+          <p class="eyebrow"><span class="eyebrow-line"></span> <span id="slide-kicker">PERSONNEL ORIENTATION // 01</span></p>
+        </div>
+        <div class="slide-content" id="slide-content" aria-live="polite">
+          <h2 id="protocol-title">Welcome aboard, recruit.</h2>
+          <p>Welcome to Ganime’s Tower Corporation. Your appointment is effective immediately. Please proceed through this orientation before beginning your duties.</p>
+          <p class="slide-aside">We appreciate your cooperation. We have already recorded it.</p>
+        </div>
+      </section>
+        <div class="slide-controls">
+          <button class="slide-button" id="slide-prev" type="button" disabled>← Back</button>
+          <div class="slide-progress" aria-hidden="true"><span id="slide-progress"></span></div>
+          <span class="slide-count" id="slide-count">01 / 04</span>
+          <button class="slide-button slide-next" id="slide-next" type="button">Continue →</button>
+        </div>
+      </div>
+
+      <section class="game-section" id="game" aria-labelledby="game-title">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> INCOMING TRANSMISSION</p><h2 id="game-title">Level one.</h2></div>
+          <div class="progress-wrap"><span id="progress-label">RIDDLE 01 / 03</span><div class="progress-track"><span id="progress-fill"></span></div></div>
+        </div>
+
+        <article class="riddle-card" aria-live="polite">
+          <div class="card-topline"><span id="riddle-category">THE ELEMENTS</span><span class="riddle-number" id="riddle-number">№ 01</span></div>
+          <div class="card-body">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <div class="riddle-text" id="riddle-text">I can be cracked, made, told, and played.<br />What am I?</div>
+            <p class="riddle-byline" id="riddle-byline">A riddle from the beginning</p>
+          </div>
+          <form class="answer-form" id="answer-form">
+            <label class="visually-hidden" for="answer-input">Your answer</label>
+            <input id="answer-input" name="answer" type="text" placeholder="Type your answer…" autocomplete="off" />
+            <button type="submit" aria-label="Submit answer"><span>TRY</span><span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+          <div class="card-footer">
+            <button class="text-button" id="hint-button" type="button"><span aria-hidden="true">◎</span> Need a hint?</button>
+            <span class="attempt-note" id="attempt-note">EVERY GUESS IS A CLUE</span>
+          </div>
+        </article>
+        <aside class="commentator" aria-label="Pedro, tower commentator">
+          <div class="commentator-avatar" aria-hidden="true">P<span>•</span></div>
+          <div class="commentator-copy">
+            <div class="commentator-name">PEDRO <span>// TOWER COMMENTARY</span></div>
+            <p id="commentator-line" role="status" aria-live="polite">Well, well. A visitor. Try not to confuse confidence with progress.</p>
+          </div>
+          <span class="commentator-signal" aria-hidden="true">LIVE</span>
+        </aside>
+      </section>
+    </main>
+
+    <footer><span>GANIME’S TOWER CORPORATION</span><span>YOUR FIRST DAY STARTS HERE</span><span>© <span id="year"></span></span></footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090611" />
+    <meta name="description" content="Ganime’s Tower Corporation — Level 10 cognitive assessment." />
+    <title>Ganime’s Tower — Level 10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/welcome.css" />
+    <link rel="stylesheet" href="/screen.css" />
+    <link rel="stylesheet" href="/inventory.css" />
+    <link rel="stylesheet" href="/smile/level.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Ganime’s Tower home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>GANIME’S TOWER</span></a>
+      <span class="level-indicator">LEVEL 10 <span>// COGNITIVE READINESS</span></span>
+      <div class="topbar-meta"><span class="status-dot"></span><span>PERSONNEL // APTITUDE REVIEW</span></div>
+    </header>
+    <main class="smile-main">
+      <section class="stone-intro" id="stone-intro" aria-labelledby="stone-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> EMPLOYEE ORIENTATION / FIELD ITEM</p>
+        <h1 id="stone-title">Don't spill the bean bucko, grab that one</h1>
+        <button class="stone-pickup" id="stone-pickup" type="button" aria-label="Collect the stone">
+          <img src="/assets/stone-transparent.png" alt="Pixel-art turquoise stone" />
+          <span id="stone-prompt">ADD TO INVENTORY</span>
+        </button>
+      </section>
+      <section class="pattern-phase" id="pattern-phase" aria-labelledby="pattern-title" hidden>
+        <p class="eyebrow"><span class="eyebrow-line"></span> <span id="exercise-index">EXERCISE 01 / 03</span></p>
+        <h1 id="pattern-title">Visual reasoning assessment</h1>
+        <p class="pattern-question" id="pattern-question"></p>
+        <div class="pattern-sequence" id="pattern-sequence" role="group" aria-label="Visual matrix puzzle"></div>
+        <div class="pattern-choices" id="pattern-choices" role="group" aria-label="Choose the missing tile"></div>
+        <p class="pattern-feedback" id="pattern-feedback" aria-live="polite"></p>
+        <div class="assessment-done" id="assessment-done" hidden>
+          <p>ASSESSMENT COMPLETE</p>
+          <a class="smile-next" href="/ABCDEFGHIJKLMNOPQRSTUVWXYZ">NEXT LEVEL <span>→</span></a>
+        </div>
+      </section>
+      <aside class="smile-pedro" aria-label="Pedro, tower commentator"><div class="commentator-avatar" aria-hidden="true">P<span>•</span></div><div><strong>PEDRO <small>// TOWER COMMENTARY</small></strong><p id="smile-pedro-line">Stone. A sensible choice. For once, someone around here has a solid head.</p></div></aside>
+    </main>
+    <script src="/inventory.js?v=memory-inventory-4" defer></script>
+    <script src="/smile/level.js?v=memory-inventory-1" defer></script>
+  </body>
+</html>
