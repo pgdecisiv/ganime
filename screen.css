@@ -154,7 +154,7 @@ main.is-playing .game-section { display: flex; }
 .riddle-text { color: #f4eff7; font: 500 clamp(19px, 2.8vw, 30px)/1.5 var(--sans); }
 .riddle-text.image-riddle { display: grid; place-items: center; max-width: none; margin: 0 auto; }
 .key-riddle-figure { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 0; }
-.key-riddle-figure img { display: block; width: clamp(125px, 18vh, 175px); height: clamp(125px, 18vh, 175px); object-fit: contain; filter: drop-shadow(0 0 18px #ff4ca755) drop-shadow(0 0 28px #b7ff4a33); }
+.key-riddle-figure img { display: block; width: clamp(125px, 18vh, 175px); height: clamp(125px, 18vh, 175px); object-fit: contain; mix-blend-mode: multiply; filter: drop-shadow(0 0 8px #8b704f55); }
 .key-riddle-figure figcaption { color: var(--acid); font: 600 13px var(--mono); letter-spacing: .035em; text-transform: lowercase; text-shadow: 0 0 10px #b7ff4a55; }
 [hidden] { display: none !important; }
 .quote-mark { color: var(--pink); }

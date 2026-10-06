@@ -1,7 +1,7 @@
 const riddles = [
   {
     category: "TOWER ORIENTATION // FIRST ASSIGNMENT",
-    prompt: `<figure class="key-riddle-figure"><img src="/assets/tower-key.svg" alt="A fluorescent green and pink key" /><figcaption>the answer is key</figcaption></figure>`,
+    prompt: `<figure class="key-riddle-figure"><img src="/assets/key.png" alt="An ornate vintage brass key" /><figcaption>the answer is key</figcaption></figure>`,
     byline: "",
     image: true,
     note: "ADD THE ANSWER TO THE ADDRESS BAR",
