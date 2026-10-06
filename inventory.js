@@ -72,7 +72,7 @@
   pedroComment.setAttribute("role", "status");
   pedroComment.setAttribute("aria-live", "polite");
   pedroComment.hidden = true;
-  pedroComment.innerHTML = '<div class="commentator-avatar" aria-hidden="true">P<span>•</span></div><div><strong>PEDRO <small>// TOWER COMMENTARY</small></strong><p></p></div>';
+  pedroComment.innerHTML = '<div class="commentator-avatar" aria-hidden="true">P<span>•</span><i class="tv-mouth"></i></div><div><strong>PEDRO <small>// TOWER COMMENTARY</small></strong><p></p></div>';
   document.body.append(pedroComment);
 
   const slots = inventory.querySelector(".inventory-slots");

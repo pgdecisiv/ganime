@@ -3,6 +3,7 @@ const legend = document.querySelector("#legend");
 const stageLabel = document.querySelector("#stage-label");
 const feedback = document.querySelector("#keypad-feedback");
 const commentator = document.querySelector("#commentator-line");
+const spiralCue = document.querySelector("#golden-spiral-cue");
 const nextLevel = document.createElement("a");
 
 const sequences = [
@@ -34,7 +35,31 @@ const sequences = [
 let stage = 0;
 let progress = 0;
 let locked = false;
+let idleTimer = 0;
+let flashTimer = 0;
+let repeatTimer = 0;
 const buttons = [];
+
+function stopIdleCue() {
+  window.clearTimeout(idleTimer);
+  window.clearTimeout(flashTimer);
+  window.clearTimeout(repeatTimer);
+  spiralCue.classList.remove("is-visible");
+}
+
+function startIdleCue() {
+  stopIdleCue();
+  if (stage !== 2 || locked) return;
+  idleTimer = window.setTimeout(() => {
+    const flash = () => {
+      if (stage !== 2 || locked) return;
+      spiralCue.classList.add("is-visible");
+      flashTimer = window.setTimeout(() => spiralCue.classList.remove("is-visible"), 2400);
+      repeatTimer = window.setTimeout(flash, 10000);
+    };
+    flash();
+  }, 20000);
+}
 
 nextLevel.className = "next-level-button";
 nextLevel.href = "/fibo";
@@ -42,6 +67,7 @@ nextLevel.textContent = "NEXT LEVEL";
 nextLevel.hidden = true;
 
 function setStage(nextStage) {
+  stopIdleCue();
   stage = nextStage;
   progress = 0;
   locked = false;
@@ -60,9 +86,11 @@ function setStage(nextStage) {
     : stage === 1
       ? "The odds are done. Now we find out if you know a prime from a corporate lunch break."
       : "Numbers at last. This is usually where people start feeling clever.";
+  startIdleCue();
 }
 
 function completeStage() {
+  stopIdleCue();
   const current = sequences[stage];
   if (current.complete) {
     locked = true;
@@ -79,6 +107,7 @@ function completeStage() {
 }
 
 function pressButton(button) {
+  if (stage === 2) startIdleCue();
   if (locked) return;
   const sequence = sequences[stage].order;
   const expected = sequence[progress];
@@ -93,6 +122,7 @@ function pressButton(button) {
       progress = 0;
       feedback.textContent = "";
       locked = false;
+      startIdleCue();
     }, 550);
     return;
   }

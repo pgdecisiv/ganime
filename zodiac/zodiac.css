@@ -13,10 +13,8 @@ body { min-height: 100dvh; display: flex; flex-direction: column; background: ra
 .option-arrow { color: var(--acid); font: 700 18px var(--mono); }
 .zodiac-option-b { border-color: #ff58b566; }
 .zodiac-option-b:hover, .zodiac-option-b:focus-visible { border-color: #ff58b5; box-shadow: inset 0 0 32px #ff4ca70d, 0 0 24px #ff4ca727; }
-.zodiac-option-c { width: min(100%, 310px); min-height: 54px; margin-top: 14px; padding: 9px 13px; border-color: #b7ff4a66; }
-.zodiac-option-c .option-code { width: 30px; height: 30px; flex-basis: 30px; border-color: #b7ff4a77; color: var(--acid); }
-.zodiac-option-c .option-name { color: #d5ffc0; font-size: 10px; }
-.zodiac-option-c .option-arrow { font-size: 14px; }
+.zodiac-option-c { border-color: #b7ff4a66; }
+.zodiac-option-c:hover, .zodiac-option-c:focus-visible { border-color: var(--acid); box-shadow: inset 0 0 32px #b7ff4a0d, 0 0 24px #b7ff4a27; }
 .zodiac-pedro { width: min(100%, 570px); display: flex; align-items: center; gap: 10px; margin-top: 32px; padding-top: 14px; border-top: 1px solid #ff4ca733; text-align: left; }
 .zodiac-pedro .commentator-avatar { flex: 0 0 34px; width: 34px; height: 34px; font-size: 12px; }
 .zodiac-pedro strong { color: #ff8bc5; font: 700 8px var(--mono); letter-spacing: .09em; }
@@ -35,6 +33,5 @@ body { min-height: 100dvh; display: flex; flex-direction: column; background: ra
   .zodiac-panel h1 { font-size: 23px; }
   .zodiac-note { margin: 7px 0 12px; font-size: 9px; }
   .zodiac-option { min-height: 76px; }
-  .zodiac-option-c { min-height: 42px; margin-top: 8px; }
   .zodiac-pedro { margin-top: 15px; }
 }

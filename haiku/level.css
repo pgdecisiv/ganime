@@ -1,0 +1,39 @@
+html, body { min-height: 100%; }
+body { min-height: 100dvh; display: flex; flex-direction: column; background: radial-gradient(ellipse at 50% 25%, #1b1428 0%, #0b0812 58%, #08060d 100%); }
+.logic-main { flex: 1; padding: 22px 18px 40px; display: grid; place-items: start center; }
+.logic-panel { width: min(100%, 1050px); }
+.logic-heading { text-align: center; margin: 8px auto 21px; }
+.logic-heading .eyebrow { color: var(--acid); font: 700 9px var(--mono); letter-spacing: .14em; }
+.logic-heading h1 { margin: 6px 0 8px; color: #f7eff9; font: 600 clamp(25px, 4vw, 38px)/1.15 "Orbitron", var(--mono); }
+.logic-intro { margin: 0 auto; max-width: 680px; color: #b6a9bd; font: 11px/1.7 var(--mono); }
+.logic-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 14px; align-items: stretch; }
+.clue-sheet, .grid-sheet { padding: clamp(15px, 2.7vw, 23px); border: 1px solid #ff58b544; background: linear-gradient(145deg, #14111b, #0d0b12); box-shadow: inset 0 0 45px #ff58b508, 0 12px 45px #0005; }
+.sheet-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid #ffffff16; }
+.sheet-heading h2 { margin: 0; color: #ff8bc5; font: 700 9px var(--mono); letter-spacing: .1em; }
+.sheet-heading span { color: #817687; font: 7px var(--mono); text-align: right; }
+.clue-list { display: grid; gap: 14px; margin: 17px 0; padding-left: 26px; color: #d6cbd9; font: 10px/1.65 var(--mono); }
+.clue-list li { padding-left: 4px; }
+.clue-list li::marker { color: var(--acid); font-weight: 700; }
+.clue-list b { color: #fff; font-weight: 700; }
+.clue-note, .grid-instruction { margin: auto 0 0; color: #8d8193; font: 8px/1.6 var(--mono); }
+.grid-wrap { overflow-x: auto; }
+.logic-grid { width: 100%; margin-top: 12px; border-collapse: collapse; font-family: var(--mono); }
+.logic-grid th, .logic-grid td { padding: 8px 6px; border-bottom: 1px solid #ffffff12; }
+.logic-grid thead th { color: #918598; font: 700 8px var(--mono); letter-spacing: .07em; text-align: left; }
+.logic-grid tbody th { width: 25%; color: #e8dfe9; font: 700 10px var(--mono); text-align: left; }
+.logic-grid select { width: 100%; min-width: 84px; padding: 9px 7px; border: 1px solid #ffffff20; border-radius: 0; background: #0b0910; color: #e8dfe9; font: 9px var(--mono); }
+.logic-grid select:focus { border-color: var(--acid); outline: 1px solid var(--acid); }
+.logic-grid select option:disabled { color: #615a65; }
+.grid-instruction { margin-top: 12px; }
+.logic-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 17px; color: #817687; font: 8px var(--mono); }
+.logic-submit { display: flex; align-items: center; gap: 12px; padding: 11px 16px; border: 1px solid #b7ff4a88; background: #b7ff4a12; color: var(--acid); font: 700 9px var(--mono); cursor: pointer; }
+.logic-submit:hover, .logic-submit:focus-visible { outline: 0; border-color: var(--acid); background: #b7ff4a22; }
+.logic-feedback { min-height: 19px; margin: 10px 0 0; color: var(--acid); font: 9px/1.6 var(--mono); }
+.logic-next { display: inline-block; color: var(--acid); font: 700 9px var(--mono); text-decoration: none; }
+.logic-pedro { display: flex; align-items: center; gap: 10px; margin-top: 20px; padding-top: 13px; border-top: 1px solid #ff4ca733; }
+.logic-pedro .commentator-avatar { flex: 0 0 34px; width: 34px; height: 34px; font-size: 12px; }
+.logic-pedro strong { color: #ff8bc5; font: 700 8px var(--mono); letter-spacing: .09em; }
+.logic-pedro small { color: #86788e; font-weight: 400; }
+.logic-pedro p { margin: 4px 0 0; color: #c1b5c6; font: 10px/1.45 var(--mono); }
+.logic-panel.is-solved .logic-grid select { border-color: #b7ff4a66; color: var(--acid); }
+@media (max-width: 720px) { .logic-layout { grid-template-columns: 1fr; } .logic-main { padding-inline: 12px; } .logic-grid select { min-width: 95px; } }

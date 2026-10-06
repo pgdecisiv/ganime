@@ -80,7 +80,7 @@ const onboardingSlides = [
     kind: "protocol",
     kicker: "ASSIGNED ORIENTATION GUIDE // 04",
     title: "Meet Pedro.",
-    body: `<p>Pedro is your commentator and guide through the Tower. He’ll offer hints, let you know when you’re getting warmer, and explain your duties.</p><p>He knows every answer. He will not simply give you one. Management calls this “professional development.”</p><p class="pedro-quote">“Try not to disappoint me. I have a very low bar and a long afternoon.”</p>`
+    body: `<div class="pedro-intro-dialogue"><div class="commentator-avatar" aria-hidden="true">P<span>•</span><i class="tv-mouth"></i></div><div><p>Pedro is your commentator and guide through the Tower. He’ll offer hints, let you know when you’re getting warmer, and explain your duties.</p><p>He knows every answer. He will not simply give you one. Management calls this “professional development.”</p><p class="pedro-quote">“Try not to disappoint me. I have a very low bar and a long afternoon.”</p></div></div>`
   }
 ];
 

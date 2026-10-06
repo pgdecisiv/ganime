@@ -9,6 +9,8 @@ function showCollectedState() {
   pickup.setAttribute("aria-label", "Pixel-art chess knight added to inventory");
   pickupPrompt.textContent = "ADDED TO INVENTORY";
   unlock.hidden = false;
+  const inventoryToggle = document.querySelector(".inventory-toggle");
+  if (inventoryToggle?.getAttribute("aria-expanded") !== "true") inventoryToggle?.click();
 }
 
 pickup.addEventListener("click", () => {

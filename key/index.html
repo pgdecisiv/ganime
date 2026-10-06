@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#090611" />
+    <meta name="theme-color" content="#292c2a" />
     <meta name="description" content="Ganime’s Tower Corporation — Level 02 assignment." />
     <title>Ganime’s Tower — Level 02</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/welcome.css" />
     <link rel="stylesheet" href="/screen.css" />
     <script src="/key-level.js" defer></script>
+      <link rel="stylesheet" href="/retro.css" />
+      <script src="/pedro.js" defer></script>
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -27,6 +29,9 @@
 
     <main class="is-playing">
       <section class="game-section keypad-screen" aria-labelledby="game-title">
+        <div class="golden-spiral-cue" id="golden-spiral-cue" aria-hidden="true">
+          <svg viewBox="0 0 240 240" role="presentation"><path d="M120 120 C120 95 140 82 162 84 C187 86 199 107 196 130 C192 158 168 177 140 173 C106 169 84 143 88 112 C92 76 122 52 157 57 C198 63 220 97 214 136 C208 181 170 211 128 204 C79 197 47 157 55 108 C63 53 109 19 160 29" /></svg>
+        </div>
         <div class="keypad-heading">
           <div><p class="eyebrow"><span class="eyebrow-line"></span> INCOMING TRANSMISSION // LOCK 02</p><h1 id="game-title">Level two.</h1></div>
           <div class="keypad-stage" id="stage-label">SEQUENCE 01 // UNLABELED</div>
@@ -37,7 +42,7 @@
           <div class="keypad-feedback" id="keypad-feedback" role="status" aria-live="polite"></div>
         </section>
         <aside class="commentator" aria-label="Pedro, tower commentator">
-          <div class="commentator-avatar" aria-hidden="true">P<span>•</span></div>
+          <div class="commentator-avatar" aria-hidden="true">P<span>•</span><i class="tv-mouth"></i></div>
           <div class="commentator-copy"><div class="commentator-name">PEDRO <span>// TOWER COMMENTARY</span></div><p id="commentator-line" role="status" aria-live="polite">Oh good, you found the right door. Let's see if you can count.</p></div>
           <span class="commentator-signal" aria-hidden="true">LIVE</span>
         </aside>

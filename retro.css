@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Special+Elite&display=swap');
+
+:root {
+  color-scheme: light;
+  --bg: #222525;
+  --panel: #f3ebdc;
+  --ink: #302c26;
+  --muted: #62584a;
+  --faint: #8a7b68;
+  --line: #967b59;
+  --acid: #e0b968;
+  --pink: #c67848;
+  --sans: "Special Elite", "Courier New", monospace;
+  --mono: "Special Elite", "Courier New", monospace;
+  --serif: "Bree Serif", Georgia, serif;
+  --cabinet: #75583f;
+  --cabinet-light: #a98257;
+  --brass: #d4b477;
+  --screen: #211e1a;
+  --phosphor: #f3d49b;
+}
+
+html, body { background: var(--bg) !important; color: var(--ink) !important; }
+body { background-image: radial-gradient(ellipse at 50% 12%, #3b4442 0, #222525 58%, #171918 100%) !important; }
+body::before { opacity: .11 !important; background-image: radial-gradient(#d8cbb31a .7px, transparent .8px) !important; background-size: 4px 4px !important; mask-image: none !important; }
+body::after { opacity: .08 !important; background: repeating-linear-gradient(to bottom, transparent 0 3px, #120f0c 4px) !important; mix-blend-mode: multiply; }
+.grain { opacity: .045 !important; }
+
+.topbar, footer { background: #292c2a !important; color: #e8dfce !important; border-color: #b49462 !important; }
+.brand, .topbar-meta, .level-indicator, .level-indicator span, footer span { color: #e8dfce !important; text-shadow: none !important; }
+.brand { font-family: var(--mono) !important; }
+.brand-mark { border-radius: 50% !important; border: 2px solid var(--brass) !important; background: #343734; box-shadow: 0 0 0 2px #171918 !important; }
+.brand-mark span, .status-dot { border-radius: 50% !important; background: #c9824f !important; box-shadow: 0 0 7px #eab87a88 !important; }
+.status-dot { animation: broadcast-beacon 1.5s steps(2, end) infinite !important; }
+@keyframes broadcast-beacon { 50% { opacity: .35; } }
+
+.hero, .game-section, .protocol, main, .welcome-screen { color: var(--ink) !important; }
+.hero { background: transparent !important; border-color: #d4b47744 !important; }
+h1, h2, h3, .section-heading h2, .protocol-heading h2, .slide-content h2, .keypad-heading h1 { color: #342c22 !important; text-shadow: none !important; font-family: var(--serif) !important; letter-spacing: .005em !important; }
+h1 em, .eyebrow, .hero-index > span:first-child, .card-topline, .progress-wrap > span, .riddle-number, .commentator-name, .commentator-signal { color: #97633f !important; text-shadow: none !important; }
+.eyebrow, .topbar-meta, .level-indicator, .card-topline, .progress-wrap > span, .riddle-number, .commentator-name, .commentator-signal, footer { font-family: var(--mono) !important; }
+.eyebrow-line, .index-rule { background: var(--brass) !important; box-shadow: none !important; }
+.intro, .quiet-note, .protocol-step p, .slide-content p, .riddle-byline { color: #65594b !important; }
+.eye-art { opacity: .28 !important; filter: sepia(.6) !important; }
+.orbit, .orbit-two, .orbit-three, .iris, .iris::before, .iris::after { border-color: #d4b47766 !important; box-shadow: none !important; }
+.pupil { background: #e0b968 !important; box-shadow: 0 0 18px #e0b96855 !important; }
+.eye-core { background: radial-gradient(circle, #e0b96822, transparent 72%) !important; }
+
+.protocol, .riddle-card, .keypad-console, .commentator, .tower-inventory, .inventory-drop-comment { background: #f3ebdc !important; border: 2px solid #8b704f !important; box-shadow: 4px 4px 0 #3a3026 !important; clip-path: none !important; }
+.instruction-list li, .slide-list li, .card-footer, .slide-controls { border-color: #8b704f44 !important; color: #514638 !important; }
+.instruction-list .enjoy-line, .slide-content .pedro-quote { color: #9c5e3d !important; }
+.begin-button, .next-level-button, .durin-form button, .timer-button, .timer-next, .chess-next, .movie-answer-form button, .movie-next, .smile-next, .maze-next { background: #dfb967 !important; color: #2a251e !important; border: 2px solid #594631 !important; border-radius: 3px !important; box-shadow: 2px 3px 0 #594631 !important; clip-path: none !important; font-family: var(--mono) !important; }
+.begin-button:hover, .next-level-button:hover, .durin-form button:hover, .timer-button:hover, .timer-next:hover, .chess-next:hover, .movie-answer-form button:hover, .movie-next:hover, .smile-next:hover, .maze-next:hover { background: #f0d18f !important; }
+.slide-button, .answer-form, .durin-form, .keypad-button, .rabbit-preview, .inventory-slot, .timer-display, .knight-pickup, .stone-pickup, .movie-portrait, .movie-dialog, .movie-answer-form input, .pattern-sequence, .pattern-choice { border-color: #9b805b !important; border-radius: 2px !important; }
+.slide-button, .keypad-button { background: #e6dcc8 !important; color: #342c22 !important; box-shadow: 2px 2px 0 #8b704f !important; font-family: var(--serif) !important; }
+.slide-next, .answer-form button, .text-button, .text-button span, .feedback, .keypad-stage, .keypad-feedback { color: #985f3c !important; }
+.slide-progress, .progress-track { background: #d7cbb4 !important; }
+.slide-progress span, .progress-track span { background: #d8ac5e !important; box-shadow: none !important; }
+.disclaimer-screen { background: #332d25 !important; color: #f0e4ce !important; box-shadow: inset 0 0 0 8px #8c704d !important; }
+.disclaimer-screen h1, .disclaimer-heading, .disclaimer-heading p, .disclaimer-copy p, .disclaimer-stamp, .warning-symbol { color: #f0e4ce !important; text-shadow: none !important; }
+.disclaimer-screen::after { border: 2px solid #d4b477 !important; }
+.riddle-text, .keypad-legend, .durin-legend, .rabbit-legend { color: #342c22 !important; text-shadow: none !important; }
+.riddle-card { background: #f3ebdc !important; }
+.answer-form { border-bottom-width: 2px !important; }
+.answer-form input, .durin-form input { color: #342c22 !important; font-family: var(--sans) !important; }
+.answer-form input::placeholder { color: #897a64 !important; }
+.feedback.error { color: #a44f3b !important; }
+.commentator, [class*="-pedro"], .rabbit-commentator { color: #342c22 !important; }
+.commentator-copy p, [class*="-pedro"] p, .rabbit-commentator p { color: #514638 !important; }
+.commentator-name span, [class*="-pedro"] small { color: #786c59 !important; }
+.keypad-button.is-lit { background: #d8b465 !important; color: #2d261b !important; }
+.keypad-button.is-wrong, .durin-form.is-wrong button { background: #ba7152 !important; }
+
+/* A brief golden-ratio spiral nudge appears only during the numbered keypad stage. */
+.golden-spiral-cue {
+  position: absolute !important;
+  z-index: 3 !important;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+.golden-spiral-cue.is-visible { opacity: .82; }
+.golden-spiral-cue svg {
+  width: clamp(150px, 27vw, 290px);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 0 8px #f1c45a99);
+  animation: golden-spiral-turn 1.4s ease-out both;
+}
+.golden-spiral-cue path {
+  fill: none;
+  stroke: #d6a83f;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@keyframes golden-spiral-turn {
+  from { transform: rotate(-18deg) scale(.82); }
+  to { transform: rotate(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .golden-spiral-cue svg { animation: none; }
+}
+.tower-inventory, .inventory-drop-comment { color: #342c22 !important; backdrop-filter: none !important; }
+.inventory-toggle, .inventory-count, .inventory-slot > span, .inventory-drop-comment strong { color: #805839 !important; }
+.inventory-slot.has-item { border-color: #b18c53 !important; background: #e9dfca !important; box-shadow: inset 0 0 0 2px #f3ebdc !important; }
+.inventory-item-icon { filter: sepia(.3) !important; }
+.inventory-drop-comment p { color: #514638 !important; }
+.durin-form, .movie-answer-form input, .timer-display, .pattern-sequence { background: #28241f !important; color: var(--phosphor) !important; }
+.timer-display { border: 4px solid #987948 !important; text-shadow: 0 0 9px #f3d49b77 !important; box-shadow: inset 0 0 24px #d6ae5933, 0 0 0 4px #5f4b30 !important; }
+.timer-colon, .timer-button.is-stop, .timer-units span:nth-child(2) { color: #d08c58 !important; }
+.maze-frame, .movie-dialog { background: #28241f !important; box-shadow: inset 0 0 24px #d6ae591e !important; }
+.maze-wall, .maze-label, .maze-controls kbd, .drag-symbol, .pattern-token, .matrix-mark { color: #e0c37d !important; stroke: #e0c37d !important; }
+.maze-controls kbd, .pattern-choice { background: #e9dfca !important; color: #342c22 !important; }
+.movie-dialog, .pattern-question, .pattern-feedback, .pickup-stamp, .chess-unlock p { color: #dfb967 !important; text-shadow: none !important; }
+.knight-pickup, .stone-pickup, .pattern-choice, .movie-portrait { background: #e8deca !important; }
+.stone-pickup img, .knight-art, .movie-portrait img, .inventory-item-icon { image-rendering: auto; }
+.pattern-choice.is-right, .stone-intro > .eyebrow, .pattern-phase > .eyebrow, .assessment-done p { color: #edca82 !important; }
+
+/* Active puzzle areas sit inside a walnut cabinet with a curved phosphor screen. */
+main.is-playing > .game-section, main[class$="-main"] {
+  position: relative !important;
+  isolation: isolate;
+  z-index: 1;
+  overflow: hidden;
+  background: transparent !important;
+}
+main.is-playing > .game-section::before, main[class$="-main"]::before {
+  content: ""; position: absolute; z-index: -2; inset: 8px 176px 198px 28px;
+  border: 8px ridge #a98257; border-radius: 58px 58px 42px 42px / 42px 42px 32px 32px;
+  background:
+    radial-gradient(circle at calc(100% - 48px) 34%, #5a4634 0 9px, #e0c38e 10px 12px, #453629 13px 16px, transparent 17px),
+    radial-gradient(circle at calc(100% - 48px) 49%, #5a4634 0 6px, #dfc38c 7px 9px, #453629 10px 13px, transparent 14px),
+    radial-gradient(circle at calc(100% - 48px) 63%, #352c24 0 12px, #d0b176 13px 15px, #463729 16px 18px, transparent 19px),
+    radial-gradient(ellipse at 50% 0%, #a77c53, #705139 72%, #4b382b);
+  box-shadow: 0 22px 0 #171817, 0 30px 42px #0009, inset 0 0 0 4px #4a3728, inset 0 0 0 7px #c2a16a;
+  pointer-events: none;
+}
+main.is-playing > .game-section::after, main[class$="-main"]::after {
+  content: ""; position: absolute; z-index: -1; inset: 30px 246px 218px 38px;
+  border: 8px solid #4b4035; border-radius: 48px / 38px;
+  background: radial-gradient(ellipse at 50% 45%, #40372b 0, #211e1a 72%);
+  box-shadow: 0 0 0 3px #c4a06a, inset 0 0 40px #080807, inset 0 0 0 2px #120f0c;
+  pointer-events: none;
+}
+main.is-playing > .game-section { padding: 34px 222px 212px 28px !important; }
+main[class$="-main"] { padding: 34px 222px 212px 28px !important; }
+body:not(:has(.tower-inventory)) main.is-playing > .game-section::before, body:not(:has(.tower-inventory)) main[class$="-main"]::before { right: 28px; }
+body:not(:has(.tower-inventory)) main.is-playing > .game-section::after, body:not(:has(.tower-inventory)) main[class$="-main"]::after { right: 94px; }
+body:not(:has(.tower-inventory)) main.is-playing > .game-section, body:not(:has(.tower-inventory)) main[class$="-main"] { padding-right: 122px !important; }
+main.is-playing > .game-section > .section-heading { width: min(620px, 100%); }
+main.is-playing > .game-section > .riddle-card, main.is-playing > .game-section > .keypad-console { max-width: min(620px, 100%); }
+.keypad-heading { max-width: min(620px, 100%) !important; }
+main.maze-main { width: min(calc(100vw - 56px), 1100px) !important; }
+main.is-playing > .game-section > :not(.commentator), main[class$="-main"] > :not([class*="-pedro"]):not(.commentator):not(.maze-bottom) { position: relative; z-index: 1; }
+main.is-playing > .game-section > .commentator, main[class$="-main"] [class*="-pedro"], main[class$="-main"] .commentator, main[class$="-main"] .rabbit-commentator {
+  position: absolute !important; z-index: 3; left: calc(50% - 74px) !important; right: auto !important; bottom: 8px !important;
+  transform: translateX(-50%); width: min(860px, calc(100% - 48px)) !important;
+  min-height: 170px; margin: 0 !important; padding: 8px 14px !important;
+  display: grid !important; grid-template-columns: 162px minmax(0, 1fr) auto !important;
+  align-items: center; gap: 10px !important; text-align: left !important;
+  border: 2px solid #b79865 !important; border-radius: 4px !important;
+  background: linear-gradient(#eee4d0, #d7c5a7) !important; box-shadow: 0 3px 0 #3a3025, inset 0 0 0 2px #f9f2e5 !important;
+}
+body:not(:has(.tower-inventory)) main.is-playing > .game-section > .commentator, body:not(:has(.tower-inventory)) main[class$="-main"] [class*="-pedro"], body:not(:has(.tower-inventory)) main[class$="-main"] .commentator, body:not(:has(.tower-inventory)) main[class$="-main"] .rabbit-commentator { left: calc(50% - 19px) !important; }
+main.is-playing > .game-section > .commentator > .commentator-avatar, main[class$="-main"] [class*="-pedro"] > .commentator-avatar, main[class$="-main"] .commentator-avatar, main[class$="-main"] .rabbit-commentator > .commentator-avatar { grid-column: 1; }
+main.is-playing > .game-section > .commentator .commentator-copy, main[class$="-main"] [class*="-pedro"] > div:not(.commentator-avatar), main[class$="-main"] .commentator-copy, main[class$="-main"] .rabbit-commentator > div:not(.commentator-avatar) { grid-column: 2; }
+main.is-playing > .game-section > .commentator .commentator-signal { grid-column: 3; }
+.commentator-avatar {
+  position: relative !important; isolation: isolate; display: block !important;
+  width: 150px !important; height: 150px !important; flex: 0 0 150px !important;
+  border: 8px solid #b8864f !important; border-radius: 12px !important;
+  background: #473a2d !important; color: transparent !important; font-size: 0 !important;
+  box-shadow: inset 0 0 0 3px #d4b477, 2px 2px 0 #634a35 !important;
+}
+.commentator-avatar::before {
+  content: ""; position: absolute; inset: 6px; z-index: -1;
+  background: url("/assets/pedro-default.jfif") center / cover no-repeat, #705c43;
+  border: 2px solid #92734d;
+}
+.commentator-avatar::after { content: ""; position: absolute; right: -10px; bottom: 3px; width: 5px; height: 5px; background: #f2e6ce; border: 2px solid #634a35; box-shadow: 0 -9px 0 -1px #634a35; }
+.commentator-avatar span { display: none !important; }
+.tv-mouth { display: none !important; }
+.commentator-avatar[data-pedro-state="talking"]::before { animation: pedro-image-talk .46s steps(1, end) infinite; }
+.commentator-avatar[data-pedro-state="disappointed"]::before { background-image: url("/assets/pedro-disappointed.jfif"); }
+@keyframes pedro-image-talk { 0%, 49% { background-image: url("/assets/pedro-talking.jfif"); } 50%, 100% { background-image: url("/assets/pedro-default.jfif"); } }
+main.is-playing > .game-section .commentator-name, main[class$="-main"] [class*="-pedro"] strong, main[class$="-main"] .commentator-name { color: #825a38 !important; font: 700 8px var(--mono) !important; letter-spacing: .12em; }
+main.is-playing > .game-section .commentator-name span, main[class$="-main"] [class*="-pedro"] small { color: #776a55 !important; }
+main.is-playing > .game-section .commentator-copy p, main[class$="-main"] [class*="-pedro"] p, main[class$="-main"] .commentator-copy p { margin: 2px 0 0 !important; color: #433b30 !important; font: 11px/1.35 var(--sans) !important; }
+main.is-playing > .game-section h1, main.is-playing > .game-section h2, main.is-playing > .game-section h3, main.is-playing > .game-section .eyebrow, main[class$="-main"] h1, main[class$="-main"] h2, main[class$="-main"] h3, main[class$="-main"] .eyebrow { color: #e8d3a7 !important; font-family: var(--serif) !important; text-shadow: 0 1px 6px #090807 !important; }
+main.is-playing > .game-section .card-topline, main.is-playing > .game-section .riddle-number, main.is-playing > .game-section .progress-wrap > span, main[class$="-main"] .pickup-prompt, main[class$="-main"] .movie-stage-count { color: #d4bb89 !important; }
+.commentator-signal { color: #a95e3b !important; font: 700 8px var(--mono) !important; }
+.pedro-intro-dialogue { display: flex; align-items: flex-start; gap: 16px; }
+.pedro-intro-dialogue > .commentator-avatar { width: 150px !important; height: 150px !important; flex: 0 0 150px !important; }
+.pedro-intro-dialogue > div:last-child { min-width: 0; }
+.slide-content .pedro-intro-dialogue p { max-width: none; }
+.pedro-intro-dialogue .pedro-quote { color: #825a38 !important; background: #dfc99e !important; border-color: #a77c53 !important; }
+
+/* The inventory is a separate walnut-trimmed accessory outside the screen. */
+.tower-inventory { position: fixed !important; z-index: 8 !important; top: 78px !important; right: 12px !important; width: max-content; padding: 8px !important; border: 2px solid #92734d !important; border-radius: 5px; background: #e7ddc9 !important; box-shadow: 2px 3px 0 #393027 !important; }
+.inventory-toggle { color: #624c36 !important; font-family: var(--mono) !important; }
+.inventory-count, .inventory-slot > span { color: #875d36 !important; }
+.inventory-slot { background: #d6c7ad !important; border-color: #9a805d !important; }
+.inventory-slot.has-item { background: #f2e8d5 !important; border-color: #bd995e !important; }
+.inventory-drop-comment { position: fixed !important; z-index: 9; right: auto !important; left: 50% !important; bottom: 6px !important; transform: translateX(-50%); width: min(560px, calc(100vw - 28px)) !important; background: #e7ddc9 !important; }
+.inventory-drop-comment.is-visible { animation: inventory-comment-in .24s ease-out forwards; }
+.inventory-drop-comment strong { color: #805839 !important; }
+.inventory-drop-comment p { color: #514638 !important; }
+
+.timer-display { color: #f3d49b !important; }
+.timer-colon { color: #d08c58 !important; text-shadow: none !important; }
+.timer-units, .pickup-prompt { color: #76664f !important; }
+.timer-button.is-stop { background: #bd7650 !important; color: #fff0d7 !important; border-color: #70402f !important; }
+.timer-button.is-locked { background: #8e8679 !important; color: #f2e9d7 !important; }
+.maze-frame::before { opacity: .12 !important; background-image: linear-gradient(#d8bd7b24 1px, transparent 1px), linear-gradient(90deg, #d8bd7b24 1px, transparent 1px) !important; }
+.maze-wall { stroke: #d8bd7b !important; filter: none !important; }
+.maze-label, .maze-label span, .maze-controls, .maze-controls kbd { color: #e1d0ac !important; text-shadow: none !important; }
+.maze-controls kbd { background: #332c23 !important; border-color: #a27f4c !important; }
+.mouse-eye, .mouse-body, .mouse-ear { stroke: #342c22 !important; }
+.matrix-main { background: transparent !important; }
+.matrix-grid { inset: 54px 230px 120px 38px !important; }
+.matrix-glyph { color: #e0cb91 !important; text-shadow: 0 0 5px #d7ba6b55 !important; }
+.movie-dialog { color: #eed193 !important; }
+.movie-answer-form input { color: #f3d49b !important; }
+.pickup-stamp { color: #8b5736 !important; border-color: #a27f4c !important; }
+.pattern-sequence { color: #eed193 !important; }
+.pattern-token, .pattern-question, .pattern-feedback { color: #8b5736 !important; text-shadow: none !important; }
+.pattern-token.is-missing, .matrix-cell.is-missing { color: #af6748 !important; }
+.matrix-cell { background: #383229 !important; border-color: #9b805b !important; }
+.matrix-mark { fill: #d8bd7b !important; stroke: #f0dda3 !important; filter: none !important; }
+.matrix-outline { fill: #d19a6422 !important; stroke: #d8bd7b !important; }
+.matrix-arrow { stroke: #f0dda3 !important; }
+.matrix-orientation { stroke: #cf8051 !important; filter: none !important; }
+.pattern-choice { color: #393128 !important; }
+.pattern-choice:hover, .pattern-choice.is-right { background: #d8bd7b !important; color: #31271c !important; }
+.pattern-choice.is-wrong { color: #994e36 !important; border-color: #b96e4d !important; }
+.knight-pickup:hover, .stone-pickup:hover { border-color: #b28a51 !important; box-shadow: inset 0 0 18px #c6a36233 !important; }
+.knight-art, .stone-pickup img, .movie-portrait img, .inventory-item-icon { filter: grayscale(.7) sepia(.9) saturate(.8) !important; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline-color: #af7447 !important; }
+
+/* User-supplied transparent cabinet artwork replaces the CSS-drawn TV. */
+main.is-playing > .game-section::before, main[class$="-main"]::before {
+  inset: 0 auto auto 50% !important;
+  width: min(88vw, 920px) !important;
+  height: auto !important;
+  aspect-ratio: 1268 / 945;
+  max-height: calc(100% - 182px);
+  transform: translateX(-50%);
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: url("/assets/frame.png") center / contain no-repeat !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+main.is-playing > .game-section::after, main[class$="-main"]::after { display: none !important; }
+main.is-playing > .game-section { padding: 30px 18px 310px !important; }
+main[class$="-main"] { padding: 30px 18px 310px !important; }
+main.is-playing > .game-section > .section-heading { width: min(590px, 66vw, 100%); }
+main.is-playing > .game-section > .riddle-card, main.is-playing > .game-section > .keypad-console { max-width: min(590px, 66vw, 100%); }
+.keypad-heading { max-width: min(590px, 66vw, 100%) !important; }
+main[class$="-main"] > :not([class*="-pedro"]):not(.commentator):not(.maze-bottom) { max-width: min(590px, 66vw, 100%); }
+
+@media (max-width: 850px) {
+  main.is-playing > .game-section::before, main[class$="-main"]::before { width: min(96vw, 920px) !important; max-height: calc(100% - 182px); }
+  main.is-playing > .game-section { padding: 24px 12px 310px !important; }
+  main[class$="-main"] { padding: 24px 12px 310px !important; }
+  main.is-playing > .game-section > .section-heading { width: min(590px, 73vw, 100%); }
+  main.is-playing > .game-section > .riddle-card, main.is-playing > .game-section > .keypad-console { max-width: min(590px, 73vw, 100%); }
+  .keypad-heading { max-width: min(590px, 73vw, 100%) !important; }
+  main[class$="-main"] > :not([class*="-pedro"]):not(.commentator):not(.maze-bottom) { max-width: min(590px, 73vw, 100%); }
+}
+@media (max-width: 520px) {
+  main.is-playing > .game-section::before, main[class$="-main"]::before { width: 100% !important; max-height: calc(100% - 182px); }
+  main.is-playing > .game-section { padding: 24px 8px 310px !important; }
+  main[class$="-main"] { padding: 24px 8px 310px !important; }
+  main.is-playing > .game-section > .section-heading { width: min(100%, 590px); }
+  main.is-playing > .game-section > .riddle-card, main.is-playing > .game-section > .keypad-console { max-width: min(100%, 590px); }
+  .keypad-heading { max-width: min(100%, 590px) !important; }
+  main[class$="-main"] > :not([class*="-pedro"]):not(.commentator):not(.maze-bottom) { max-width: min(100%, 590px); }
+}
+
+/* Let the cabinet use the full available height; Pedro's banner may overlap it. */
+main.is-playing > .game-section::before, main[class$="-main"]::before {
+  width: min(100vw, 920px, calc((100dvh - 160px) * 1.342)) !important;
+  max-height: none !important;
+}
+main.is-playing > .game-section { padding: 30px 18px 236px !important; }
+main[class$="-main"] { padding: 30px 18px 236px !important; }
+@media (max-width: 850px) {
+  main.is-playing > .game-section::before, main[class$="-main"]::before {
+    width: min(100vw, 920px, calc((100dvh - 160px) * 1.342)) !important;
+    max-height: none !important;
+  }
+  main.is-playing > .game-section { padding: 24px 12px 236px !important; }
+  main[class$="-main"] { padding: 24px 12px 236px !important; }
+}
+@media (max-width: 520px) {
+  main.is-playing > .game-section::before, main[class$="-main"]::before {
+    width: min(100vw, calc((100dvh - 160px) * 1.342)) !important;
+    max-height: none !important;
+  }
+  main.is-playing > .game-section { padding: 24px 8px 236px !important; }
+  main[class$="-main"] { padding: 24px 8px 236px !important; }
+}
+
+@media (max-width: 850px) {
+  main.is-playing > .game-section::before, main[class$="-main"]::before { inset: 8px 176px 198px 8px; border-radius: 42px 42px 28px 28px / 32px 32px 24px 24px; }
+  main.is-playing > .game-section::after, main[class$="-main"]::after { inset: 25px 246px 218px 18px; border-radius: 34px / 28px; }
+  main.is-playing > .game-section { padding: 30px 222px 212px 18px !important; }
+  main[class$="-main"] { padding: 30px 222px 212px 18px !important; }
+  body:not(:has(.tower-inventory)) main.is-playing > .game-section, body:not(:has(.tower-inventory)) main[class$="-main"] { padding-right: 122px !important; }
+  .tower-inventory { top: 78px !important; right: 8px !important; max-width: 150px; }
+  .inventory-slots { grid-template-columns: repeat(4, 34px) !important; gap: 3px !important; }
+  .inventory-slot { width: 34px !important; height: 34px !important; }
+  .inventory-item-icon { width: 22px !important; height: 22px !important; }
+  .matrix-grid { inset: 54px 234px 115px 18px !important; }
+  main.is-playing > .game-section > .commentator, main[class$="-main"] [class*="-pedro"], main[class$="-main"] .commentator, main[class$="-main"] .rabbit-commentator { grid-template-columns: 162px minmax(0, 1fr) auto !important; gap: 8px !important; width: min(860px, calc(100% - 28px)) !important; min-height: 170px; padding: 6px 8px !important; }
+  main.is-playing > .game-section > .commentator, main[class$="-main"] [class*="-pedro"], main[class$="-main"] .commentator, main[class$="-main"] .rabbit-commentator { left: calc(50% - 84px) !important; }
+  .commentator-avatar { width: 150px !important; height: 150px !important; flex-basis: 150px !important; }
+  .commentator-signal { display: none; }
+  .commentator-copy, [class*="-pedro"] > div:not(.commentator-avatar), .rabbit-commentator > div:not(.commentator-avatar) { grid-column: 2; }
+  .commentator-name, [class*="-pedro"] strong { font-size: 7px !important; }
+  .commentator-copy p, [class*="-pedro"] p { font-size: 10px !important; }
+  .pedro-intro-dialogue { gap: 10px; }
+  .pedro-intro-dialogue > .commentator-avatar { width: 150px !important; height: 150px !important; flex-basis: 150px !important; }
+}
+@media (max-width: 520px) {
+  main.is-playing > .game-section::before, main[class$="-main"]::before { inset: 64px 5px 198px; border-width: 5px; border-radius: 30px 30px 22px 22px / 24px 24px 18px 18px; }
+  main.is-playing > .game-section::after, main[class$="-main"]::after { inset: 82px 14px 218px; border-width: 5px; border-radius: 27px / 22px; }
+  body:has(.tower-inventory:not(.is-collapsed)) main.is-playing > .game-section::before, body:has(.tower-inventory:not(.is-collapsed)) main[class$="-main"]::before { top: 132px; }
+  body:has(.tower-inventory:not(.is-collapsed)) main.is-playing > .game-section::after, body:has(.tower-inventory:not(.is-collapsed)) main[class$="-main"]::after { top: 150px; }
+  main.is-playing > .game-section { padding: 96px 14px 212px !important; }
+  main[class$="-main"] { padding: 96px 14px 212px !important; }
+  body:has(.tower-inventory:not(.is-collapsed)) main.is-playing > .game-section, body:has(.tower-inventory:not(.is-collapsed)) main[class$="-main"] { padding-top: 164px !important; }
+  body:not(:has(.tower-inventory)) main.is-playing > .game-section, body:not(:has(.tower-inventory)) main[class$="-main"] { padding-right: 14px !important; }
+  .tower-inventory { top: 72px !important; bottom: auto !important; left: auto !important; right: 8px !important; width: 138px !important; max-width: 138px; padding: 5px !important; }
+  .inventory-slots { grid-template-columns: repeat(4, 29px) !important; gap: 3px !important; }
+  .inventory-slot { width: 29px !important; height: 29px !important; }
+  .inventory-item-icon { width: 19px !important; height: 19px !important; }
+  .inventory-toggle { gap: 5px !important; padding-bottom: 4px !important; font-size: 7px !important; }
+  .inventory-slots { grid-template-columns: repeat(4, 29px) !important; }
+  .inventory-slot { width: 29px !important; height: 29px !important; }
+  .inventory-item-icon { width: 19px !important; height: 19px !important; }
+  .inventory-slot > span { font-size: 4px !important; }
+  .matrix-grid { inset: 40px 25px 174px 14px !important; }
+  main.is-playing > .game-section > .commentator, main[class$="-main"] [class*="-pedro"], main[class$="-main"] .commentator, main[class$="-main"] .rabbit-commentator { left: 50% !important; right: auto !important; bottom: 8px !important; transform: translateX(-50%); width: calc(100% - 20px) !important; grid-template-columns: 162px minmax(0, 1fr) auto !important; padding: 5px !important; }
+  .commentator-avatar { width: 150px !important; height: 150px !important; flex-basis: 150px !important; }
+  .commentator-copy p, [class*="-pedro"] p { font-size: 9px !important; }
+  .level-eleven-pedro { display: grid !important; }
+}
+@media (prefers-reduced-motion: reduce) { .commentator-avatar::before, .status-dot { animation: none !important; } }
+
+/* Fill the entire visible play area with the TV; side wood may crop on narrow viewports. */
+main.is-playing > .game-section::before, main[class$="-main"]::before {
+  inset: 0 auto auto 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: auto !important;
+  max-height: none !important;
+  transform: translateX(-50%);
+  background-size: auto 100% !important;
+  background-position: center top !important;
+}
+main.is-playing > .game-section > .commentator,
+main[class$="-main"] [class*="-pedro"],
+main[class$="-main"] .commentator,
+main[class$="-main"] .rabbit-commentator {
+  left: 12px !important;
+  right: auto !important;
+  width: calc(100% - 24px) !important;
+  max-width: none !important;
+  transform: none !important;
+}
+body main.is-playing > .game-section > .commentator,
+body main[class$="-main"] [class*="-pedro"],
+body main[class$="-main"] .commentator,
+body main[class$="-main"] .rabbit-commentator {
+  left: 12px !important;
+  right: auto !important;
+  width: calc(100% - 24px) !important;
+  max-width: none !important;
+  transform: none !important;
+}
+body:not(:has(.tower-inventory)) main.is-playing > .game-section > .commentator,
+body:not(:has(.tower-inventory)) main[class$="-main"] [class*="-pedro"],
+body:not(:has(.tower-inventory)) main[class$="-main"] .commentator,
+body:not(:has(.tower-inventory)) main[class$="-main"] .rabbit-commentator {
+  left: 12px !important;
+  right: auto !important;
+  width: calc(100% - 24px) !important;
+  max-width: none !important;
+  transform: none !important;
+}
+
+/* Keep Pedro at the lower-left on every level and size the banner to its copy. */
+body main.is-playing > .game-section > .commentator,
+body main[class$="-main"] [class*="-pedro"],
+body main[class$="-main"] .commentator,
+body main[class$="-main"] .rabbit-commentator {
+  position: fixed !important;
+  z-index: 20 !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: 50px !important;
+  left: 12px !important;
+  width: fit-content !important;
+  max-width: calc(100vw - 24px) !important;
+  transform: none !important;
+}
+body:not(:has(.tower-inventory)) main.is-playing > .game-section > .commentator,
+body:not(:has(.tower-inventory)) main[class$="-main"] [class*="-pedro"],
+body:not(:has(.tower-inventory)) main[class$="-main"] .commentator,
+body:not(:has(.tower-inventory)) main[class$="-main"] .rabbit-commentator {
+  position: fixed !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: 50px !important;
+  left: 12px !important;
+  width: fit-content !important;
+  max-width: calc(100vw - 24px) !important;
+  transform: none !important;
+}
+
+/* Home onboarding also sits in the opening of the supplied cabinet. */
+#top { position: relative; isolation: isolate; }
+#top::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  pointer-events: none;
+  background: url("/assets/frame.png") center top / auto 100% no-repeat;
+}
+#top .welcome-screen {
+  position: absolute !important;
+  z-index: 1;
+  inset: 7.5% 9% 23% !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 18px 34px 48px !important;
+}
+#top .disclaimer-screen { border-radius: 7% / 9%; box-shadow: none !important; }
+#top .disclaimer-screen::after { display: none !important; }
+
+/* Compact the dispatch puzzle so it stays above Pedro's banner in the screen. */
+main.logic-main { padding: 56px 18px 40px !important; }
+.logic-heading { margin: 0 auto 10px !important; }
+.logic-layout { gap: 10px !important; }
+.clue-sheet, .grid-sheet { padding: 12px 15px !important; }
+.sheet-heading { padding-bottom: 8px !important; }
+.clue-list { gap: 7px !important; margin: 9px 0 !important; padding-left: 20px !important; font-size: 9px !important; line-height: 1.45 !important; }
+.logic-grid { margin-top: 7px !important; }
+.logic-grid th, .logic-grid td { padding: 4px !important; }
+.logic-grid select { min-width: 72px !important; padding: 4px 6px !important; }
+.grid-instruction { margin-top: 7px !important; }
+.logic-actions { gap: 10px !important; margin-top: 10px !important; }
+.logic-feedback { min-height: 10px !important; margin-top: 5px !important; }
+
+/* The Speak, Friend prompt belongs inside the CRT aperture. */
+.durin-main .durin-legend {
+  position: absolute !important;
+  z-index: 5 !important;
+  top: 8.5% !important;
+  right: 13% !important;
+  left: auto !important;
+  width: auto !important;
+  max-width: none !important;
+  color: #e8d3a7 !important;
+  font-family: var(--serif) !important;
+  text-align: right !important;
+  text-shadow: 0 1px 6px #090807 !important;
+}
+main.durin-main { padding-bottom: 168px !important; }
+
+/* Hammer's binary field uses the green Space Mono terminal treatment across the aperture. */
+.matrix-main > .matrix-grid {
+  position: absolute !important;
+  z-index: 1 !important;
+  inset: 9% 14% 28% !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  padding: 10px 8px !important;
+}
+.matrix-main .matrix-glyph {
+  color: #69e87b !important;
+  font-family: "Space Mono", monospace !important;
+  text-shadow: 0 0 7px #39d85b88 !important;
+}
+.matrix-main .matrix-target:hover,
+.matrix-main .matrix-target:focus-visible {
+  color: #d8ffd8 !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 5px #e2ffe2, 0 0 18px #54ff71 !important;
+  transform: scale(1.5);
+  z-index: 2;
+}
+
+/* Remove the legacy right-side inventory gutter on pages without an inventory. */
+body:not(:has(.tower-inventory)) main.is-playing > .game-section,
+body:not(:has(.tower-inventory)) main[class$="-main"] {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+@media (max-width: 850px) {
+  body:not(:has(.tower-inventory)) main.is-playing > .game-section,
+  body:not(:has(.tower-inventory)) main[class$="-main"] {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+@media (max-width: 520px) {
+  body:not(:has(.tower-inventory)) main.is-playing > .game-section,
+  body:not(:has(.tower-inventory)) main[class$="-main"] {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+/* Center page content within the CRT aperture rather than the old asymmetric page gutter. */
+.timer-main > .timer-panel { position: relative; top: 36px; transform: none; }
+.logic-main > .logic-panel { position: relative; top: 56px; transform: none; }
+.maze-main > .maze-heading,
+.maze-main > .maze-frame,
+.maze-main > .maze-controls,
+.maze-main > .maze-bottom { position: relative; top: 36px; transform: none; }
+
+/* Keep every onboarding slide, including its controls, inside the CRT glass. */
+#top .welcome-screen {
+  inset: 5.5% 9% 30% !important;
+  padding: 14px 34px 44px !important;
+}
+#top .slide-controls {
+  right: 16px !important;
+  bottom: 8px !important;
+  left: 16px !important;
+  gap: 9px !important;
+}
+#top .disclaimer-screen {
+  gap: 14px !important;
+  padding: clamp(18px, 3vh, 28px) clamp(18px, 4vw, 48px) !important;
+}
+#top .disclaimer-copy { gap: 10px !important; }
+#top .disclaimer-copy p { font-size: clamp(10px, 1.1vw, 13px) !important; line-height: 1.55 !important; }
+#top .welcome-screen > .hero {
+  min-height: 0 !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  padding: 8px 18px 22px !important;
+  overflow: hidden !important;
+}
+#top .welcome-screen > .hero .eye-art,
+#top .welcome-screen > .hero .hero-index { display: none !important; }
+#top .welcome-screen > .hero .hero-copy {
+  max-width: 100% !important;
+  padding: 20px 24px !important;
+  border: 2px solid #8b704f;
+  background: #f3ebdc;
+  box-shadow: 4px 4px 0 #3a3026;
+}
+#top .welcome-screen > .hero h1 { font-size: clamp(27px, 4vw, 40px) !important; line-height: 1.05 !important; }
+#top .welcome-screen > .hero h1 em { color: #985f3c !important; }
+#top .welcome-screen > .hero .intro { max-width: 520px; margin: 10px 0 0 !important; font-size: 12px !important; line-height: 1.5 !important; }
+#top .welcome-screen > .hero .quiet-note { margin: 10px 0 0 !important; color: #776a55 !important; }
+#top .welcome-screen > .protocol {
+  max-height: 100% !important;
+  padding: 14px 20px 40px !important;
+}
+#top .welcome-screen > .protocol .slide-content { min-height: 0 !important; }
+#top .welcome-screen > .protocol .slide-content h2 { margin-bottom: 10px !important; font-size: clamp(21px, 2.6vw, 28px) !important; }
+#top .welcome-screen > .protocol .slide-content p { margin: 6px 0 !important; font-size: 11px !important; line-height: 1.45 !important; }
+#top .welcome-screen > .protocol .pedro-intro-dialogue { gap: 10px !important; }
+#top .welcome-screen > .protocol .pedro-intro-dialogue > .commentator-avatar { width: 120px !important; height: 120px !important; flex-basis: 120px !important; }
+@media (max-width: 760px) {
+  #top .welcome-screen { inset: 4% 3% 29% !important; padding: 10px 12px 42px !important; }
+  #top .disclaimer-screen { gap: 9px !important; padding: 12px !important; }
+  #top .disclaimer-copy { gap: 7px !important; }
+  #top .disclaimer-copy p { font-size: 9px !important; line-height: 1.4 !important; }
+  #top .welcome-screen > .hero { padding: 4px 6px 14px !important; }
+  #top .welcome-screen > .hero .hero-copy { padding: 12px !important; }
+  #top .welcome-screen > .hero h1 { font-size: clamp(22px, 7vw, 32px) !important; }
+  #top .welcome-screen > .hero .intro { font-size: 10px !important; }
+  #top .welcome-screen > .protocol { padding: 10px 12px 38px !important; }
+  #top .welcome-screen > .protocol .pedro-intro-dialogue > .commentator-avatar { width: 82px !important; height: 82px !important; flex-basis: 82px !important; }
+  #top .welcome-screen > .protocol .slide-content p { font-size: 9px !important; }
+  #top .slide-controls { right: 4px !important; left: 4px !important; gap: 6px !important; }
+}
+
+/* Lower Level 01's action content into the clear center of the CRT aperture. */
+#game > .section-heading,
+#game > .riddle-card {
+  transform: translateY(clamp(12px, 3.8vh, 34px));
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#292c2a" />
+    <meta name="description" content="Ganime’s Tower Corporation — Level 14, the courier logic grid." />
+    <title>Ganime’s Tower — The Missing Dispatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/welcome.css" />
+    <link rel="stylesheet" href="/screen.css" />
+    <link rel="stylesheet" href="/haiku/level.css" />
+    <script src="/haiku/level.js" defer></script>
+      <link rel="stylesheet" href="/retro.css" />
+      <script src="/pedro.js" defer></script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Ganime’s Tower home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>GANIME’S TOWER</span></a>
+      <span class="level-indicator">LEVEL 14 <span>// LOGISTICS AUDIT</span></span>
+      <div class="topbar-meta"><span class="status-dot"></span><span>PERSONNEL // DISPATCH REVIEW</span></div>
+    </header>
+    <main class="logic-main">
+      <section class="logic-panel" aria-labelledby="logic-title">
+        <div class="logic-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> INTERNAL INVESTIGATION / CASE 014</p>
+          <h1 id="logic-title">The missing dispatch</h1>
+          <p class="logic-intro">Four couriers left the archive at different times, each carrying a different item. One dispatch is missing. Reconstruct the departures.</p>
+        </div>
+        <div class="logic-layout">
+          <section class="clue-sheet" aria-labelledby="clue-title">
+            <div class="sheet-heading"><h2 id="clue-title">WITNESS STATEMENTS</h2><span>ALL FOUR STATEMENTS VERIFIED</span></div>
+            <ol class="clue-list">
+              <li>Cora arrived before Ada.</li>
+              <li>The courier who arrived at <b>08:00</b> carried the <b>mirror</b>.</li>
+              <li>Dante arrived immediately after the courier carrying the <b>compass</b>.</li>
+              <li>The <b>key</b> arrived later than the <b>ledger</b>.</li>
+              <li>Ada carried neither the key nor the compass.</li>
+              <li>Basil arrived later than Ada.</li>
+            </ol>
+            <p class="clue-note">Each person has one unique arrival time and one unique item. “Immediately after” means the very next time slot.</p>
+          </section>
+          <section class="grid-sheet" aria-labelledby="grid-title">
+            <div class="sheet-heading"><h2 id="grid-title">DISPATCH GRID</h2><span>ASSIGN ONE OF EACH</span></div>
+            <div class="grid-wrap">
+              <table class="logic-grid">
+                <thead><tr><th scope="col">COURIER</th><th scope="col">ARRIVAL</th><th scope="col">ITEM</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Ada</th><td><label class="visually-hidden" for="time-ada">Ada arrival time</label><select id="time-ada" data-kind="time" data-person="Ada"><option value="">—</option><option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option></select></td><td><label class="visually-hidden" for="item-ada">Ada's item</label><select id="item-ada" data-kind="item" data-person="Ada"><option value="">—</option><option>Compass</option><option>Key</option><option>Ledger</option><option>Mirror</option></select></td></tr>
+                  <tr><th scope="row">Basil</th><td><label class="visually-hidden" for="time-basil">Basil arrival time</label><select id="time-basil" data-kind="time" data-person="Basil"><option value="">—</option><option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option></select></td><td><label class="visually-hidden" for="item-basil">Basil's item</label><select id="item-basil" data-kind="item" data-person="Basil"><option value="">—</option><option>Compass</option><option>Key</option><option>Ledger</option><option>Mirror</option></select></td></tr>
+                  <tr><th scope="row">Cora</th><td><label class="visually-hidden" for="time-cora">Cora arrival time</label><select id="time-cora" data-kind="time" data-person="Cora"><option value="">—</option><option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option></select></td><td><label class="visually-hidden" for="item-cora">Cora's item</label><select id="item-cora" data-kind="item" data-person="Cora"><option value="">—</option><option>Compass</option><option>Key</option><option>Ledger</option><option>Mirror</option></select></td></tr>
+                  <tr><th scope="row">Dante</th><td><label class="visually-hidden" for="time-dante">Dante arrival time</label><select id="time-dante" data-kind="time" data-person="Dante"><option value="">—</option><option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option></select></td><td><label class="visually-hidden" for="item-dante">Dante's item</label><select id="item-dante" data-kind="item" data-person="Dante"><option value="">—</option><option>Compass</option><option>Key</option><option>Ledger</option><option>Mirror</option></select></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="grid-instruction">Use each time and each item exactly once. Blank is allowed while you reason.</p>
+          </section>
+        </div>
+        <form id="logic-form" class="logic-actions">
+          <button class="logic-submit" type="submit"><span>CHECK GRID</span><span aria-hidden="true">↗</span></button>
+          <button id="logic-hint" class="text-button" type="button">◎ Request a hint</button>
+          <span id="hint-count">HINTS USED 00 / 03</span>
+        </form>
+        <p id="logic-feedback" class="logic-feedback" role="status" aria-live="polite"></p>
+        <a id="logic-next" class="logic-next" href="/zodiac" hidden>DISPATCH RECONSTRUCTED // CONTINUE →</a>
+        <aside class="logic-pedro"><div class="commentator-avatar" aria-hidden="true">P<span>•</span><i class="tv-mouth"></i></div><div><strong>PEDRO <small>// TOWER COMMENTARY</small></strong><p id="pedro-line">Four people, four times, four objects. Finally, a filing problem with rules.</p></div></aside>
+      </section>
+    </main>
+  </body>
+</html>
